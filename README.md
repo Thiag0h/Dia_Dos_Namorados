@@ -1,6 +1,6 @@
 # 💖 Página de Surpresa Romântica - "Para Giulia" 💖
 
-Este projeto foi criado como uma surpresa para minha namorada, Giulia. Ela gostou tanto que decidi compartilhar com o mundo — talvez outras pessoas também queiram demonstrar seu amor de forma simples, criativa e especial.
+Este projeto foi criado como uma surpresa para minha namorada, Giulia. Ela gostou tanto que decidi compartilhar — talvez outras pessoas também queiram demonstrar seu amor de forma simples, criativa e especial.
 
 ## ✨ O que essa página faz?
 
