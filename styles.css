@@ -1,0 +1,147 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #f472b6;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #a855f7;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #9333ea;
+    }
+
+    #imagem-container {
+      display: none;
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 30px;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.slide.ativo {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide.saindo {
+  transform: translateX(-100%);
+  opacity: 1;
+  z-index: 1;
+}
+
+    .heart {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: fall 4s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-60px) rotate(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    iframe#spotify-player {
+      margin-top: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      height: 80px;
+      border: none;
+    }
+
+    .contador-wrapper {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 18px;
+      color: #c4b5fd;
+    }
+
+    #contador {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 20px;
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      #declaracao {
+        font-size: 16px;
+      }
+
+      iframe#spotify-player {
+        height: 100px;
+      }
+    }
